@@ -16,5 +16,10 @@ namespace DoctorsCareEligibility
         {
             InitializeComponent();
         }
+
+        private void ImmigrationStatusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

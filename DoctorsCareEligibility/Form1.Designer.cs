@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ImmigrationStatusLabel = new System.Windows.Forms.Label();
             this.usCitizenRadioButton = new System.Windows.Forms.RadioButton();
             this.lawFullyPresentRadioButton = new System.Windows.Forms.RadioButton();
@@ -48,7 +47,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.personalInfoTabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.eligibleProgramsTabPage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.eligibleProgramsListBox = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.programDescriptionLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.personalInfoTabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.eligibleProgramsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +65,7 @@
             // 
             this.ImmigrationStatusLabel.AutoSize = true;
             this.ImmigrationStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ImmigrationStatusLabel.Location = new System.Drawing.Point(12, 29);
+            this.ImmigrationStatusLabel.Location = new System.Drawing.Point(6, 3);
             this.ImmigrationStatusLabel.Name = "ImmigrationStatusLabel";
             this.ImmigrationStatusLabel.Size = new System.Drawing.Size(162, 24);
             this.ImmigrationStatusLabel.TabIndex = 0;
@@ -66,7 +75,7 @@
             // usCitizenRadioButton
             // 
             this.usCitizenRadioButton.AutoSize = true;
-            this.usCitizenRadioButton.Location = new System.Drawing.Point(43, 56);
+            this.usCitizenRadioButton.Location = new System.Drawing.Point(37, 30);
             this.usCitizenRadioButton.Name = "usCitizenRadioButton";
             this.usCitizenRadioButton.Size = new System.Drawing.Size(74, 17);
             this.usCitizenRadioButton.TabIndex = 1;
@@ -77,7 +86,7 @@
             // lawFullyPresentRadioButton
             // 
             this.lawFullyPresentRadioButton.AutoSize = true;
-            this.lawFullyPresentRadioButton.Location = new System.Drawing.Point(43, 79);
+            this.lawFullyPresentRadioButton.Location = new System.Drawing.Point(37, 53);
             this.lawFullyPresentRadioButton.Name = "lawFullyPresentRadioButton";
             this.lawFullyPresentRadioButton.Size = new System.Drawing.Size(102, 17);
             this.lawFullyPresentRadioButton.TabIndex = 2;
@@ -88,7 +97,7 @@
             // undocumentedRadioButton
             // 
             this.undocumentedRadioButton.AutoSize = true;
-            this.undocumentedRadioButton.Location = new System.Drawing.Point(43, 102);
+            this.undocumentedRadioButton.Location = new System.Drawing.Point(37, 76);
             this.undocumentedRadioButton.Name = "undocumentedRadioButton";
             this.undocumentedRadioButton.Size = new System.Drawing.Size(146, 17);
             this.undocumentedRadioButton.TabIndex = 3;
@@ -100,7 +109,7 @@
             // 
             this.yearsPresentLabel.AutoSize = true;
             this.yearsPresentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearsPresentLabel.Location = new System.Drawing.Point(297, 29);
+            this.yearsPresentLabel.Location = new System.Drawing.Point(291, 3);
             this.yearsPresentLabel.Name = "yearsPresentLabel";
             this.yearsPresentLabel.Size = new System.Drawing.Size(292, 24);
             this.yearsPresentLabel.TabIndex = 4;
@@ -108,7 +117,7 @@
             // 
             // yearsPresentTextBox
             // 
-            this.yearsPresentTextBox.Location = new System.Drawing.Point(321, 55);
+            this.yearsPresentTextBox.Location = new System.Drawing.Point(315, 29);
             this.yearsPresentTextBox.Name = "yearsPresentTextBox";
             this.yearsPresentTextBox.Size = new System.Drawing.Size(97, 20);
             this.yearsPresentTextBox.TabIndex = 5;
@@ -116,7 +125,7 @@
             // fiveYearExemptCheckBox
             // 
             this.fiveYearExemptCheckBox.AutoSize = true;
-            this.fiveYearExemptCheckBox.Location = new System.Drawing.Point(321, 81);
+            this.fiveYearExemptCheckBox.Location = new System.Drawing.Point(315, 55);
             this.fiveYearExemptCheckBox.Name = "fiveYearExemptCheckBox";
             this.fiveYearExemptCheckBox.Size = new System.Drawing.Size(142, 17);
             this.fiveYearExemptCheckBox.TabIndex = 6;
@@ -127,7 +136,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 138);
+            this.label1.Location = new System.Drawing.Point(6, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 24);
             this.label1.TabIndex = 7;
@@ -135,7 +144,7 @@
             // 
             // numberOfFamilyMemberstextBox1
             // 
-            this.numberOfFamilyMemberstextBox1.Location = new System.Drawing.Point(43, 165);
+            this.numberOfFamilyMemberstextBox1.Location = new System.Drawing.Point(37, 139);
             this.numberOfFamilyMemberstextBox1.Name = "numberOfFamilyMemberstextBox1";
             this.numberOfFamilyMemberstextBox1.Size = new System.Drawing.Size(97, 20);
             this.numberOfFamilyMemberstextBox1.TabIndex = 8;
@@ -143,7 +152,7 @@
             // doesNotHaveChildrenCheckBox
             // 
             this.doesNotHaveChildrenCheckBox.AutoSize = true;
-            this.doesNotHaveChildrenCheckBox.Location = new System.Drawing.Point(43, 254);
+            this.doesNotHaveChildrenCheckBox.Location = new System.Drawing.Point(37, 228);
             this.doesNotHaveChildrenCheckBox.Name = "doesNotHaveChildrenCheckBox";
             this.doesNotHaveChildrenCheckBox.Size = new System.Drawing.Size(136, 17);
             this.doesNotHaveChildrenCheckBox.TabIndex = 11;
@@ -154,7 +163,7 @@
             // 
             this.isPregnantCheckBox.AutoSize = true;
             this.isPregnantCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isPregnantCheckBox.Location = new System.Drawing.Point(43, 277);
+            this.isPregnantCheckBox.Location = new System.Drawing.Point(37, 251);
             this.isPregnantCheckBox.Name = "isPregnantCheckBox";
             this.isPregnantCheckBox.Size = new System.Drawing.Size(69, 17);
             this.isPregnantCheckBox.TabIndex = 12;
@@ -166,7 +175,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 208);
+            this.label3.Location = new System.Drawing.Point(6, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 24);
             this.label3.TabIndex = 13;
@@ -175,7 +184,7 @@
             // hasChild0to5CheckBox
             // 
             this.hasChild0to5CheckBox.AutoSize = true;
-            this.hasChild0to5CheckBox.Location = new System.Drawing.Point(43, 300);
+            this.hasChild0to5CheckBox.Location = new System.Drawing.Point(37, 274);
             this.hasChild0to5CheckBox.Name = "hasChild0to5CheckBox";
             this.hasChild0to5CheckBox.Size = new System.Drawing.Size(47, 17);
             this.hasChild0to5CheckBox.TabIndex = 14;
@@ -185,7 +194,7 @@
             // hasChild5to6CheckBox
             // 
             this.hasChild5to6CheckBox.AutoSize = true;
-            this.hasChild5to6CheckBox.Location = new System.Drawing.Point(43, 323);
+            this.hasChild5to6CheckBox.Location = new System.Drawing.Point(37, 297);
             this.hasChild5to6CheckBox.Name = "hasChild5to6CheckBox";
             this.hasChild5to6CheckBox.Size = new System.Drawing.Size(47, 17);
             this.hasChild5to6CheckBox.TabIndex = 15;
@@ -195,7 +204,7 @@
             // hasChild6to12CheckBox
             // 
             this.hasChild6to12CheckBox.AutoSize = true;
-            this.hasChild6to12CheckBox.Location = new System.Drawing.Point(43, 346);
+            this.hasChild6to12CheckBox.Location = new System.Drawing.Point(37, 320);
             this.hasChild6to12CheckBox.Name = "hasChild6to12CheckBox";
             this.hasChild6to12CheckBox.Size = new System.Drawing.Size(53, 17);
             this.hasChild6to12CheckBox.TabIndex = 16;
@@ -206,7 +215,7 @@
             // hasChild13to18CheckBox
             // 
             this.hasChild13to18CheckBox.AutoSize = true;
-            this.hasChild13to18CheckBox.Location = new System.Drawing.Point(43, 369);
+            this.hasChild13to18CheckBox.Location = new System.Drawing.Point(37, 343);
             this.hasChild13to18CheckBox.Name = "hasChild13to18CheckBox";
             this.hasChild13to18CheckBox.Size = new System.Drawing.Size(59, 17);
             this.hasChild13to18CheckBox.TabIndex = 17;
@@ -216,7 +225,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 232);
+            this.label2.Location = new System.Drawing.Point(7, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 13);
             this.label2.TabIndex = 18;
@@ -226,7 +235,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(297, 138);
+            this.label4.Location = new System.Drawing.Point(291, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(228, 24);
             this.label4.TabIndex = 19;
@@ -234,52 +243,125 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(321, 165);
+            this.textBox1.Location = new System.Drawing.Point(315, 139);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 20;
             // 
+            // personalInfoTabControl
+            // 
+            this.personalInfoTabControl.Controls.Add(this.tabPage1);
+            this.personalInfoTabControl.Controls.Add(this.eligibleProgramsTabPage);
+            this.personalInfoTabControl.Location = new System.Drawing.Point(2, 2);
+            this.personalInfoTabControl.Name = "personalInfoTabControl";
+            this.personalInfoTabControl.SelectedIndex = 0;
+            this.personalInfoTabControl.Size = new System.Drawing.Size(667, 474);
+            this.personalInfoTabControl.TabIndex = 21;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.undocumentedRadioButton);
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.ImmigrationStatusLabel);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.usCitizenRadioButton);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.lawFullyPresentRadioButton);
+            this.tabPage1.Controls.Add(this.hasChild13to18CheckBox);
+            this.tabPage1.Controls.Add(this.yearsPresentLabel);
+            this.tabPage1.Controls.Add(this.hasChild6to12CheckBox);
+            this.tabPage1.Controls.Add(this.yearsPresentTextBox);
+            this.tabPage1.Controls.Add(this.hasChild5to6CheckBox);
+            this.tabPage1.Controls.Add(this.fiveYearExemptCheckBox);
+            this.tabPage1.Controls.Add(this.hasChild0to5CheckBox);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.numberOfFamilyMemberstextBox1);
+            this.tabPage1.Controls.Add(this.isPregnantCheckBox);
+            this.tabPage1.Controls.Add(this.doesNotHaveChildrenCheckBox);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(659, 448);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Personal Information";
+            // 
+            // eligibleProgramsTabPage
+            // 
+            this.eligibleProgramsTabPage.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.eligibleProgramsTabPage.Controls.Add(this.button1);
+            this.eligibleProgramsTabPage.Controls.Add(this.programDescriptionLabel);
+            this.eligibleProgramsTabPage.Controls.Add(this.label5);
+            this.eligibleProgramsTabPage.Controls.Add(this.eligibleProgramsListBox);
+            this.eligibleProgramsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.eligibleProgramsTabPage.Name = "eligibleProgramsTabPage";
+            this.eligibleProgramsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.eligibleProgramsTabPage.Size = new System.Drawing.Size(659, 448);
+            this.eligibleProgramsTabPage.TabIndex = 1;
+            this.eligibleProgramsTabPage.Text = "Eligible Programs";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DoctorsCareEligibility.Properties.Resources.Logo;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(321, 254);
+            this.pictureBox1.Location = new System.Drawing.Point(315, 228);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(243, 120);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
+            // 
+            // eligibleProgramsListBox
+            // 
+            this.eligibleProgramsListBox.FormattingEnabled = true;
+            this.eligibleProgramsListBox.Location = new System.Drawing.Point(35, 75);
+            this.eligibleProgramsListBox.Name = "eligibleProgramsListBox";
+            this.eligibleProgramsListBox.Size = new System.Drawing.Size(288, 342);
+            this.eligibleProgramsListBox.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(31, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(234, 24);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Potential Program Matches";
+            // 
+            // programDescriptionLabel
+            // 
+            this.programDescriptionLabel.AutoSize = true;
+            this.programDescriptionLabel.Location = new System.Drawing.Point(379, 75);
+            this.programDescriptionLabel.Name = "programDescriptionLabel";
+            this.programDescriptionLabel.Size = new System.Drawing.Size(0, 13);
+            this.programDescriptionLabel.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(35, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Get Matches!";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(639, 432);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.hasChild13to18CheckBox);
-            this.Controls.Add(this.hasChild6to12CheckBox);
-            this.Controls.Add(this.hasChild5to6CheckBox);
-            this.Controls.Add(this.hasChild0to5CheckBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.isPregnantCheckBox);
-            this.Controls.Add(this.doesNotHaveChildrenCheckBox);
-            this.Controls.Add(this.numberOfFamilyMemberstextBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.fiveYearExemptCheckBox);
-            this.Controls.Add(this.yearsPresentTextBox);
-            this.Controls.Add(this.yearsPresentLabel);
-            this.Controls.Add(this.undocumentedRadioButton);
-            this.Controls.Add(this.lawFullyPresentRadioButton);
-            this.Controls.Add(this.usCitizenRadioButton);
-            this.Controls.Add(this.ImmigrationStatusLabel);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(672, 480);
+            this.Controls.Add(this.personalInfoTabControl);
             this.Name = "Form1";
             this.Text = "Doctors Care Eligibility";
+            this.personalInfoTabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.eligibleProgramsTabPage.ResumeLayout(false);
+            this.eligibleProgramsTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -304,7 +386,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TabControl personalInfoTabControl;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage eligibleProgramsTabPage;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox eligibleProgramsListBox;
+        private System.Windows.Forms.Label programDescriptionLabel;
+        private System.Windows.Forms.Button button1;
     }
 }
 

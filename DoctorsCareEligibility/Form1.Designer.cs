@@ -158,6 +158,7 @@
             this.doesNotHaveChildrenCheckBox.TabIndex = 11;
             this.doesNotHaveChildrenCheckBox.Text = "Does not have children";
             this.doesNotHaveChildrenCheckBox.UseVisualStyleBackColor = true;
+            this.doesNotHaveChildrenCheckBox.CheckedChanged += new System.EventHandler(this.doesNotHaveChildrenCheckBox_CheckedChanged);
             // 
             // isPregnantCheckBox
             // 

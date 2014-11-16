@@ -49,16 +49,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.personalInfoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.eligibleProgramsTabPage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.eligibleProgramsListBox = new System.Windows.Forms.ListBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.eligibleProgramsTabPage = new System.Windows.Forms.TabPage();
+            this.getMatchesButton = new System.Windows.Forms.Button();
             this.programDescriptionLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.eligibleProgramsListBox = new System.Windows.Forms.ListBox();
             this.personalInfoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.eligibleProgramsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.eligibleProgramsTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImmigrationStatusLabel
@@ -289,10 +289,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personal Information";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DoctorsCareEligibility.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(315, 228);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 120);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // eligibleProgramsTabPage
             // 
             this.eligibleProgramsTabPage.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.eligibleProgramsTabPage.Controls.Add(this.button1);
+            this.eligibleProgramsTabPage.Controls.Add(this.getMatchesButton);
             this.eligibleProgramsTabPage.Controls.Add(this.programDescriptionLabel);
             this.eligibleProgramsTabPage.Controls.Add(this.label5);
             this.eligibleProgramsTabPage.Controls.Add(this.eligibleProgramsListBox);
@@ -303,22 +312,23 @@
             this.eligibleProgramsTabPage.TabIndex = 1;
             this.eligibleProgramsTabPage.Text = "Eligible Programs";
             // 
-            // pictureBox1
+            // getMatchesButton
             // 
-            this.pictureBox1.Image = global::DoctorsCareEligibility.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(315, 228);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 120);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.getMatchesButton.Location = new System.Drawing.Point(35, 22);
+            this.getMatchesButton.Name = "getMatchesButton";
+            this.getMatchesButton.Size = new System.Drawing.Size(140, 23);
+            this.getMatchesButton.TabIndex = 3;
+            this.getMatchesButton.Text = "Get Matches!";
+            this.getMatchesButton.UseVisualStyleBackColor = true;
+            this.getMatchesButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // eligibleProgramsListBox
+            // programDescriptionLabel
             // 
-            this.eligibleProgramsListBox.FormattingEnabled = true;
-            this.eligibleProgramsListBox.Location = new System.Drawing.Point(35, 75);
-            this.eligibleProgramsListBox.Name = "eligibleProgramsListBox";
-            this.eligibleProgramsListBox.Size = new System.Drawing.Size(288, 342);
-            this.eligibleProgramsListBox.TabIndex = 0;
+            this.programDescriptionLabel.AutoSize = true;
+            this.programDescriptionLabel.Location = new System.Drawing.Point(379, 75);
+            this.programDescriptionLabel.Name = "programDescriptionLabel";
+            this.programDescriptionLabel.Size = new System.Drawing.Size(0, 13);
+            this.programDescriptionLabel.TabIndex = 2;
             // 
             // label5
             // 
@@ -330,22 +340,13 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Potential Program Matches";
             // 
-            // programDescriptionLabel
+            // eligibleProgramsListBox
             // 
-            this.programDescriptionLabel.AutoSize = true;
-            this.programDescriptionLabel.Location = new System.Drawing.Point(379, 75);
-            this.programDescriptionLabel.Name = "programDescriptionLabel";
-            this.programDescriptionLabel.Size = new System.Drawing.Size(0, 13);
-            this.programDescriptionLabel.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(35, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Get Matches!";
-            this.button1.UseVisualStyleBackColor = true;
+            this.eligibleProgramsListBox.FormattingEnabled = true;
+            this.eligibleProgramsListBox.Location = new System.Drawing.Point(35, 75);
+            this.eligibleProgramsListBox.Name = "eligibleProgramsListBox";
+            this.eligibleProgramsListBox.Size = new System.Drawing.Size(288, 342);
+            this.eligibleProgramsListBox.TabIndex = 0;
             // 
             // Form1
             // 
@@ -359,9 +360,9 @@
             this.personalInfoTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.eligibleProgramsTabPage.ResumeLayout(false);
             this.eligibleProgramsTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,7 +395,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox eligibleProgramsListBox;
         private System.Windows.Forms.Label programDescriptionLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button getMatchesButton;
     }
 }
 

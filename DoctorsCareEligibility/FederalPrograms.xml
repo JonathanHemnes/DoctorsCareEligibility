@@ -1,19 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <federalprogram>
   <program>
-    <programName></programName>
+    <programName>WIC</programName>
     <requirements>
-      <immigrationStatus></immigrationStatus>
-      <maxLevelOfFPL></maxLevelOfFPL>
-      <isPregnant></isPregnant>
-      <hasChildren></hasChildren>
-      
-      
+      <maxLevelOfFPL>185</maxLevelOfFPL>
+      <isPregnant>TRUE</isPregnant>
+    </requirements>
+    <note>Must be pregnant or have dependent child 5 or under. Fathers may apply.</note>
+  </program>
+  <program>
+    <programName>LEAP</programName>
+    <requirements>
+      <immigrationStatus>USCITIZEN</immigrationStatus>
+      <immigrationStatus>LEGALRESIDENT</immigrationStatus>
+      <maxLevelOfFPL>185</maxLevelOfFPL>
+      <childRequirement>6</childRequirement>
     </requirements>
     <note></note>
-
   </program>
-  
-  
+  <program>
+    <programName>CCAP</programName>
+    <requirements>
+      <maxLevelOfFPL>185</maxLevelOfFPL>
+      <childRequirement>6</childRequirement>
+      <childRequirement>PREGNANT</childRequirement>
+      <childRequirement>18</childRequirement>
+    </requirements>
+    <note>Children must be legal residents, but do not need to meet the 5 year bar requirement, however parents do not have to have legal residency to apply</note>
+  </program>
+  <program>
+    <programName>Weatherization</programName>
+    <requirements>
+      <immigrationStatus>CITIZEN</immigrationStatus>
+      <maxLevelOfFPL>200</maxLevelOfFPL>
+    </requirements>
+    <note>If client is the home owner then furnace and refrigerator repair is free, if client is renting their home, the landlord is asked to pay half of the furnace/refrigerator repair costs, if they choose not to the renter may pay himself. If the client is living in a fourplex, two of the complexes must qualify for weatherization. Large apartment buildings are evaluated on a case by case basis.</note>
+  </program>
+  <program>
+    <programName>Internet Essentials</programName>
+    <requirements>
+      <maxLevelOfFPL>185</maxLevelOfFPL>
+    </requirements>
+    <note>Have at least one child that qualifies for the National School Lunch Program; must not have subscribed to Comcast in the last 90 days; must not have overdue Comcast bills/unreturned equipment</note>
+  </program>
+  <program>
+    <programName>TANF</programName>
+    <requirements>
+      <immigrationStatus>CITIZEN</immigrationStatus>
+      <maxLevelOfFPL>185</maxLevelOfFPL>
+      <childRequirement>19</childRequirement>
+    </requirements>
+    <note></note>
+  </program>
+  <program>
+    <programName>Food Assistance</programName>
+    <requirements>
+      <maxLevelOfFPL>130</maxLevelOfFPL>
+    </requirements>
+    <note>There have been cases where households with illegal parents, but legal children qualified for assistance.</note>
+  </program>
+  <program>
+    <programName>FCC Life Line</programName>
+    <requirements>
+      <immigrationStatus>CITIZEN</immigrationStatus>
+      <maxLevelOfFPL>185</maxLevelOfFPL>
+    </requirements>
+    <note></note>
+  </program>
 </federalprogram>
 

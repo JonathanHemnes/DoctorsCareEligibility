@@ -9,12 +9,6 @@ namespace DoctorsCareEligibility
     class Person
     {
         public bool isExemptFrom5YearLimit { get; set; }
-        enum residencyStatus
-        {
-            citizenOrLegalResident,
-            legalResidentUnder5YearBar,
-            illegalResident
-        }
         public int amountOfFederalPovertyLevel { get; set; }
         public bool doesNotHaveChildren { get; set; }
         public bool hasChild0to5 { get; set; }
@@ -23,7 +17,13 @@ namespace DoctorsCareEligibility
         public bool hasChild13to18 { get; set; }
         public bool isPregnant { get; set; }
         public int numberOfFamilyMembers { get; set; }
+        private int _residencyStatus;
 
+        public int residencyStatus
+        {
+            get { return _residencyStatus; }
+            set { _residencyStatus = value; }
+        }
 
         public Person(
             bool _isExemptFrom5yrLimit, 

@@ -29,37 +29,23 @@ namespace DoctorsCareEligibility
 
         private void doesNotHaveChildrenCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (doesNotHaveChildrenCheckBox.Checked)
-            {
-                hasChild0to5CheckBox.Enabled = false;
-                hasChild0to5CheckBox.Checked = false;
-
-                hasChild5to6CheckBox.Enabled = false;
-                hasChild5to6CheckBox.Checked = false;
-
-                hasChild6to12CheckBox.Enabled = false;
-                hasChild6to12CheckBox.Checked = false;
-
-                hasChild13to18CheckBox.Enabled = false;
-                hasChild13to18CheckBox.Checked = false;
-            }
-            if (!doesNotHaveChildrenCheckBox.Checked)
-            {
-                hasChild0to5CheckBox.Enabled = true;              
-
-                hasChild5to6CheckBox.Enabled = true;
-                
-                hasChild6to12CheckBox.Enabled = true;
-
-                hasChild13to18CheckBox.Enabled = true;
-                
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thanks for using the app!\n\nPlease contact me at jhemnes@gmail.com for any changes that you would like!");
+        }
+
+        private void getMatchesButton_Click(object sender, EventArgs e)
+        {
+
         }
         
     }

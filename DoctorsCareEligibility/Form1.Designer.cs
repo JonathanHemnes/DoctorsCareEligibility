@@ -40,10 +40,6 @@
             this.doesNotHaveChildrenCheckBox = new System.Windows.Forms.CheckBox();
             this.isPregnantCheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.hasChild0to5CheckBox = new System.Windows.Forms.CheckBox();
-            this.hasChild5to6CheckBox = new System.Windows.Forms.CheckBox();
-            this.hasChild6to12CheckBox = new System.Windows.Forms.CheckBox();
-            this.hasChild13to18CheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -51,10 +47,29 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.eligibleProgramsTabPage = new System.Windows.Forms.TabPage();
-            this.getMatchesButton = new System.Windows.Forms.Button();
             this.programDescriptionLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.eligibleProgramsListBox = new System.Windows.Forms.ListBox();
+            this.ageOneCheckbox = new System.Windows.Forms.CheckBox();
+            this.ageTwoCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageThreeCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageFourCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageFiveCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageSixcheckBox = new System.Windows.Forms.CheckBox();
+            this.ageSevenCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageEightCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageNineCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageTenCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageElevenCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageTwelveCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageThirteenCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageFourteenCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageFifteenCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageSixteenCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageSeventeenCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageEighteenCheckBox = new System.Windows.Forms.CheckBox();
+            this.ageNineteenCheckBox = new System.Windows.Forms.CheckBox();
+            this.getMatchesButton = new System.Windows.Forms.Button();
             this.personalInfoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -152,7 +167,7 @@
             // doesNotHaveChildrenCheckBox
             // 
             this.doesNotHaveChildrenCheckBox.AutoSize = true;
-            this.doesNotHaveChildrenCheckBox.Location = new System.Drawing.Point(37, 228);
+            this.doesNotHaveChildrenCheckBox.Location = new System.Drawing.Point(10, 227);
             this.doesNotHaveChildrenCheckBox.Name = "doesNotHaveChildrenCheckBox";
             this.doesNotHaveChildrenCheckBox.Size = new System.Drawing.Size(136, 17);
             this.doesNotHaveChildrenCheckBox.TabIndex = 11;
@@ -164,7 +179,7 @@
             // 
             this.isPregnantCheckBox.AutoSize = true;
             this.isPregnantCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isPregnantCheckBox.Location = new System.Drawing.Point(37, 251);
+            this.isPregnantCheckBox.Location = new System.Drawing.Point(10, 250);
             this.isPregnantCheckBox.Name = "isPregnantCheckBox";
             this.isPregnantCheckBox.Size = new System.Drawing.Size(69, 17);
             this.isPregnantCheckBox.TabIndex = 12;
@@ -182,55 +197,14 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Ages of children";
             // 
-            // hasChild0to5CheckBox
-            // 
-            this.hasChild0to5CheckBox.AutoSize = true;
-            this.hasChild0to5CheckBox.Location = new System.Drawing.Point(37, 274);
-            this.hasChild0to5CheckBox.Name = "hasChild0to5CheckBox";
-            this.hasChild0to5CheckBox.Size = new System.Drawing.Size(47, 17);
-            this.hasChild0to5CheckBox.TabIndex = 14;
-            this.hasChild0to5CheckBox.Text = "0 - 5";
-            this.hasChild0to5CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // hasChild5to6CheckBox
-            // 
-            this.hasChild5to6CheckBox.AutoSize = true;
-            this.hasChild5to6CheckBox.Location = new System.Drawing.Point(37, 297);
-            this.hasChild5to6CheckBox.Name = "hasChild5to6CheckBox";
-            this.hasChild5to6CheckBox.Size = new System.Drawing.Size(47, 17);
-            this.hasChild5to6CheckBox.TabIndex = 15;
-            this.hasChild5to6CheckBox.Text = "5 - 6";
-            this.hasChild5to6CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // hasChild6to12CheckBox
-            // 
-            this.hasChild6to12CheckBox.AutoSize = true;
-            this.hasChild6to12CheckBox.Location = new System.Drawing.Point(37, 320);
-            this.hasChild6to12CheckBox.Name = "hasChild6to12CheckBox";
-            this.hasChild6to12CheckBox.Size = new System.Drawing.Size(53, 17);
-            this.hasChild6to12CheckBox.TabIndex = 16;
-            this.hasChild6to12CheckBox.Text = "6 - 12";
-            this.hasChild6to12CheckBox.UseVisualStyleBackColor = true;
-            this.hasChild6to12CheckBox.CheckedChanged += new System.EventHandler(this.hasChild6to12CheckBox_CheckedChanged);
-            // 
-            // hasChild13to18CheckBox
-            // 
-            this.hasChild13to18CheckBox.AutoSize = true;
-            this.hasChild13to18CheckBox.Location = new System.Drawing.Point(37, 343);
-            this.hasChild13to18CheckBox.Name = "hasChild13to18CheckBox";
-            this.hasChild13to18CheckBox.Size = new System.Drawing.Size(59, 17);
-            this.hasChild13to18CheckBox.TabIndex = 17;
-            this.hasChild13to18CheckBox.Text = "13 - 18";
-            this.hasChild13to18CheckBox.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 13);
+            this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Select all that apply, even if they overlap";
+            this.label2.Text = "Select all that apply";
             // 
             // label4
             // 
@@ -262,6 +236,25 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.tabPage1.Controls.Add(this.ageNineteenCheckBox);
+            this.tabPage1.Controls.Add(this.ageEighteenCheckBox);
+            this.tabPage1.Controls.Add(this.ageSeventeenCheckBox);
+            this.tabPage1.Controls.Add(this.ageSixteenCheckBox);
+            this.tabPage1.Controls.Add(this.ageFifteenCheckBox);
+            this.tabPage1.Controls.Add(this.ageFourteenCheckBox);
+            this.tabPage1.Controls.Add(this.ageThirteenCheckBox);
+            this.tabPage1.Controls.Add(this.ageTwelveCheckBox);
+            this.tabPage1.Controls.Add(this.ageElevenCheckBox);
+            this.tabPage1.Controls.Add(this.ageTenCheckBox);
+            this.tabPage1.Controls.Add(this.ageNineCheckBox);
+            this.tabPage1.Controls.Add(this.ageEightCheckBox);
+            this.tabPage1.Controls.Add(this.ageSevenCheckBox);
+            this.tabPage1.Controls.Add(this.ageSixcheckBox);
+            this.tabPage1.Controls.Add(this.ageFiveCheckBox);
+            this.tabPage1.Controls.Add(this.ageFourCheckBox);
+            this.tabPage1.Controls.Add(this.ageThreeCheckBox);
+            this.tabPage1.Controls.Add(this.ageTwoCheckBox);
+            this.tabPage1.Controls.Add(this.ageOneCheckbox);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.undocumentedRadioButton);
             this.tabPage1.Controls.Add(this.textBox1);
@@ -270,13 +263,9 @@
             this.tabPage1.Controls.Add(this.usCitizenRadioButton);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.lawFullyPresentRadioButton);
-            this.tabPage1.Controls.Add(this.hasChild13to18CheckBox);
             this.tabPage1.Controls.Add(this.yearsPresentLabel);
-            this.tabPage1.Controls.Add(this.hasChild6to12CheckBox);
             this.tabPage1.Controls.Add(this.yearsPresentTextBox);
-            this.tabPage1.Controls.Add(this.hasChild5to6CheckBox);
             this.tabPage1.Controls.Add(this.fiveYearExemptCheckBox);
-            this.tabPage1.Controls.Add(this.hasChild0to5CheckBox);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.numberOfFamilyMemberstextBox1);
@@ -292,11 +281,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DoctorsCareEligibility.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(315, 228);
+            this.pictureBox1.Location = new System.Drawing.Point(368, 285);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 120);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // eligibleProgramsTabPage
             // 
@@ -311,16 +301,6 @@
             this.eligibleProgramsTabPage.Size = new System.Drawing.Size(659, 448);
             this.eligibleProgramsTabPage.TabIndex = 1;
             this.eligibleProgramsTabPage.Text = "Eligible Programs";
-            // 
-            // getMatchesButton
-            // 
-            this.getMatchesButton.Location = new System.Drawing.Point(35, 22);
-            this.getMatchesButton.Name = "getMatchesButton";
-            this.getMatchesButton.Size = new System.Drawing.Size(140, 23);
-            this.getMatchesButton.TabIndex = 3;
-            this.getMatchesButton.Text = "Get Matches!";
-            this.getMatchesButton.UseVisualStyleBackColor = true;
-            this.getMatchesButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // programDescriptionLabel
             // 
@@ -347,6 +327,206 @@
             this.eligibleProgramsListBox.Name = "eligibleProgramsListBox";
             this.eligibleProgramsListBox.Size = new System.Drawing.Size(288, 342);
             this.eligibleProgramsListBox.TabIndex = 0;
+            // 
+            // ageOneCheckbox
+            // 
+            this.ageOneCheckbox.AutoSize = true;
+            this.ageOneCheckbox.Location = new System.Drawing.Point(10, 273);
+            this.ageOneCheckbox.Name = "ageOneCheckbox";
+            this.ageOneCheckbox.Size = new System.Drawing.Size(32, 17);
+            this.ageOneCheckbox.TabIndex = 22;
+            this.ageOneCheckbox.Text = "1";
+            this.ageOneCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // ageTwoCheckBox
+            // 
+            this.ageTwoCheckBox.AutoSize = true;
+            this.ageTwoCheckBox.Location = new System.Drawing.Point(10, 296);
+            this.ageTwoCheckBox.Name = "ageTwoCheckBox";
+            this.ageTwoCheckBox.Size = new System.Drawing.Size(32, 17);
+            this.ageTwoCheckBox.TabIndex = 23;
+            this.ageTwoCheckBox.Text = "2";
+            this.ageTwoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageThreeCheckBox
+            // 
+            this.ageThreeCheckBox.AutoSize = true;
+            this.ageThreeCheckBox.Location = new System.Drawing.Point(10, 319);
+            this.ageThreeCheckBox.Name = "ageThreeCheckBox";
+            this.ageThreeCheckBox.Size = new System.Drawing.Size(32, 17);
+            this.ageThreeCheckBox.TabIndex = 24;
+            this.ageThreeCheckBox.Text = "3";
+            this.ageThreeCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageFourCheckBox
+            // 
+            this.ageFourCheckBox.AutoSize = true;
+            this.ageFourCheckBox.Location = new System.Drawing.Point(10, 342);
+            this.ageFourCheckBox.Name = "ageFourCheckBox";
+            this.ageFourCheckBox.Size = new System.Drawing.Size(32, 17);
+            this.ageFourCheckBox.TabIndex = 25;
+            this.ageFourCheckBox.Text = "4";
+            this.ageFourCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageFiveCheckBox
+            // 
+            this.ageFiveCheckBox.AutoSize = true;
+            this.ageFiveCheckBox.Location = new System.Drawing.Point(10, 365);
+            this.ageFiveCheckBox.Name = "ageFiveCheckBox";
+            this.ageFiveCheckBox.Size = new System.Drawing.Size(32, 17);
+            this.ageFiveCheckBox.TabIndex = 26;
+            this.ageFiveCheckBox.Text = "5";
+            this.ageFiveCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageSixcheckBox
+            // 
+            this.ageSixcheckBox.AutoSize = true;
+            this.ageSixcheckBox.Location = new System.Drawing.Point(10, 388);
+            this.ageSixcheckBox.Name = "ageSixcheckBox";
+            this.ageSixcheckBox.Size = new System.Drawing.Size(32, 17);
+            this.ageSixcheckBox.TabIndex = 27;
+            this.ageSixcheckBox.Text = "6";
+            this.ageSixcheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageSevenCheckBox
+            // 
+            this.ageSevenCheckBox.AutoSize = true;
+            this.ageSevenCheckBox.Location = new System.Drawing.Point(10, 411);
+            this.ageSevenCheckBox.Name = "ageSevenCheckBox";
+            this.ageSevenCheckBox.Size = new System.Drawing.Size(32, 17);
+            this.ageSevenCheckBox.TabIndex = 28;
+            this.ageSevenCheckBox.Text = "7";
+            this.ageSevenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageEightCheckBox
+            // 
+            this.ageEightCheckBox.AutoSize = true;
+            this.ageEightCheckBox.Location = new System.Drawing.Point(103, 250);
+            this.ageEightCheckBox.Name = "ageEightCheckBox";
+            this.ageEightCheckBox.Size = new System.Drawing.Size(32, 17);
+            this.ageEightCheckBox.TabIndex = 29;
+            this.ageEightCheckBox.Text = "8";
+            this.ageEightCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageNineCheckBox
+            // 
+            this.ageNineCheckBox.AutoSize = true;
+            this.ageNineCheckBox.Location = new System.Drawing.Point(103, 273);
+            this.ageNineCheckBox.Name = "ageNineCheckBox";
+            this.ageNineCheckBox.Size = new System.Drawing.Size(32, 17);
+            this.ageNineCheckBox.TabIndex = 30;
+            this.ageNineCheckBox.Text = "9";
+            this.ageNineCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageTenCheckBox
+            // 
+            this.ageTenCheckBox.AutoSize = true;
+            this.ageTenCheckBox.Location = new System.Drawing.Point(103, 296);
+            this.ageTenCheckBox.Name = "ageTenCheckBox";
+            this.ageTenCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageTenCheckBox.TabIndex = 31;
+            this.ageTenCheckBox.Text = "10";
+            this.ageTenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageElevenCheckBox
+            // 
+            this.ageElevenCheckBox.AutoSize = true;
+            this.ageElevenCheckBox.Location = new System.Drawing.Point(103, 319);
+            this.ageElevenCheckBox.Name = "ageElevenCheckBox";
+            this.ageElevenCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageElevenCheckBox.TabIndex = 32;
+            this.ageElevenCheckBox.Text = "11";
+            this.ageElevenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageTwelveCheckBox
+            // 
+            this.ageTwelveCheckBox.AutoSize = true;
+            this.ageTwelveCheckBox.Location = new System.Drawing.Point(103, 342);
+            this.ageTwelveCheckBox.Name = "ageTwelveCheckBox";
+            this.ageTwelveCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageTwelveCheckBox.TabIndex = 33;
+            this.ageTwelveCheckBox.Text = "12";
+            this.ageTwelveCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageThirteenCheckBox
+            // 
+            this.ageThirteenCheckBox.AutoSize = true;
+            this.ageThirteenCheckBox.Location = new System.Drawing.Point(103, 365);
+            this.ageThirteenCheckBox.Name = "ageThirteenCheckBox";
+            this.ageThirteenCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageThirteenCheckBox.TabIndex = 34;
+            this.ageThirteenCheckBox.Text = "13";
+            this.ageThirteenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageFourteenCheckBox
+            // 
+            this.ageFourteenCheckBox.AutoSize = true;
+            this.ageFourteenCheckBox.Location = new System.Drawing.Point(103, 388);
+            this.ageFourteenCheckBox.Name = "ageFourteenCheckBox";
+            this.ageFourteenCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageFourteenCheckBox.TabIndex = 35;
+            this.ageFourteenCheckBox.Text = "14";
+            this.ageFourteenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageFifteenCheckBox
+            // 
+            this.ageFifteenCheckBox.AutoSize = true;
+            this.ageFifteenCheckBox.Location = new System.Drawing.Point(103, 411);
+            this.ageFifteenCheckBox.Name = "ageFifteenCheckBox";
+            this.ageFifteenCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageFifteenCheckBox.TabIndex = 36;
+            this.ageFifteenCheckBox.Text = "15";
+            this.ageFifteenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageSixteenCheckBox
+            // 
+            this.ageSixteenCheckBox.AutoSize = true;
+            this.ageSixteenCheckBox.Location = new System.Drawing.Point(205, 250);
+            this.ageSixteenCheckBox.Name = "ageSixteenCheckBox";
+            this.ageSixteenCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageSixteenCheckBox.TabIndex = 37;
+            this.ageSixteenCheckBox.Text = "16";
+            this.ageSixteenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageSeventeenCheckBox
+            // 
+            this.ageSeventeenCheckBox.AutoSize = true;
+            this.ageSeventeenCheckBox.Location = new System.Drawing.Point(205, 273);
+            this.ageSeventeenCheckBox.Name = "ageSeventeenCheckBox";
+            this.ageSeventeenCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageSeventeenCheckBox.TabIndex = 38;
+            this.ageSeventeenCheckBox.Text = "17";
+            this.ageSeventeenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageEighteenCheckBox
+            // 
+            this.ageEighteenCheckBox.AutoSize = true;
+            this.ageEighteenCheckBox.Location = new System.Drawing.Point(205, 296);
+            this.ageEighteenCheckBox.Name = "ageEighteenCheckBox";
+            this.ageEighteenCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageEighteenCheckBox.TabIndex = 39;
+            this.ageEighteenCheckBox.Text = "18";
+            this.ageEighteenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ageNineteenCheckBox
+            // 
+            this.ageNineteenCheckBox.AutoSize = true;
+            this.ageNineteenCheckBox.Location = new System.Drawing.Point(205, 319);
+            this.ageNineteenCheckBox.Name = "ageNineteenCheckBox";
+            this.ageNineteenCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.ageNineteenCheckBox.TabIndex = 40;
+            this.ageNineteenCheckBox.Text = "19";
+            this.ageNineteenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // getMatchesButton
+            // 
+            this.getMatchesButton.Location = new System.Drawing.Point(35, 22);
+            this.getMatchesButton.Name = "getMatchesButton";
+            this.getMatchesButton.Size = new System.Drawing.Size(288, 23);
+            this.getMatchesButton.TabIndex = 3;
+            this.getMatchesButton.Text = "Get Matches";
+            this.getMatchesButton.UseVisualStyleBackColor = true;
+            this.getMatchesButton.Click += new System.EventHandler(this.getMatchesButton_Click);
             // 
             // Form1
             // 
@@ -381,10 +561,6 @@
         private System.Windows.Forms.CheckBox doesNotHaveChildrenCheckBox;
         private System.Windows.Forms.CheckBox isPregnantCheckBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox hasChild0to5CheckBox;
-        private System.Windows.Forms.CheckBox hasChild5to6CheckBox;
-        private System.Windows.Forms.CheckBox hasChild6to12CheckBox;
-        private System.Windows.Forms.CheckBox hasChild13to18CheckBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
@@ -395,6 +571,25 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox eligibleProgramsListBox;
         private System.Windows.Forms.Label programDescriptionLabel;
+        private System.Windows.Forms.CheckBox ageNineteenCheckBox;
+        private System.Windows.Forms.CheckBox ageEighteenCheckBox;
+        private System.Windows.Forms.CheckBox ageSeventeenCheckBox;
+        private System.Windows.Forms.CheckBox ageSixteenCheckBox;
+        private System.Windows.Forms.CheckBox ageFifteenCheckBox;
+        private System.Windows.Forms.CheckBox ageFourteenCheckBox;
+        private System.Windows.Forms.CheckBox ageThirteenCheckBox;
+        private System.Windows.Forms.CheckBox ageTwelveCheckBox;
+        private System.Windows.Forms.CheckBox ageElevenCheckBox;
+        private System.Windows.Forms.CheckBox ageTenCheckBox;
+        private System.Windows.Forms.CheckBox ageNineCheckBox;
+        private System.Windows.Forms.CheckBox ageEightCheckBox;
+        private System.Windows.Forms.CheckBox ageSevenCheckBox;
+        private System.Windows.Forms.CheckBox ageSixcheckBox;
+        private System.Windows.Forms.CheckBox ageFiveCheckBox;
+        private System.Windows.Forms.CheckBox ageFourCheckBox;
+        private System.Windows.Forms.CheckBox ageThreeCheckBox;
+        private System.Windows.Forms.CheckBox ageTwoCheckBox;
+        private System.Windows.Forms.CheckBox ageOneCheckbox;
         private System.Windows.Forms.Button getMatchesButton;
     }
 }

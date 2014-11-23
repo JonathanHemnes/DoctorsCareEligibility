@@ -36,13 +36,13 @@
             this.yearsPresentTextBox = new System.Windows.Forms.TextBox();
             this.fiveYearExemptCheckBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.numberOfFamilyMemberstextBox1 = new System.Windows.Forms.TextBox();
+            this.numberOfFamilyMembersTextBox = new System.Windows.Forms.TextBox();
             this.doesNotHaveChildrenCheckBox = new System.Windows.Forms.CheckBox();
             this.isPregnantCheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.yearlyIncomeTextBox = new System.Windows.Forms.TextBox();
             this.personalInfoTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -157,12 +157,12 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Number of Family Members";
             // 
-            // numberOfFamilyMemberstextBox1
+            // numberOfFamilyMembersTextBox
             // 
-            this.numberOfFamilyMemberstextBox1.Location = new System.Drawing.Point(37, 139);
-            this.numberOfFamilyMemberstextBox1.Name = "numberOfFamilyMemberstextBox1";
-            this.numberOfFamilyMemberstextBox1.Size = new System.Drawing.Size(97, 20);
-            this.numberOfFamilyMemberstextBox1.TabIndex = 8;
+            this.numberOfFamilyMembersTextBox.Location = new System.Drawing.Point(37, 139);
+            this.numberOfFamilyMembersTextBox.Name = "numberOfFamilyMembersTextBox";
+            this.numberOfFamilyMembersTextBox.Size = new System.Drawing.Size(97, 20);
+            this.numberOfFamilyMembersTextBox.TabIndex = 8;
             // 
             // doesNotHaveChildrenCheckBox
             // 
@@ -216,12 +216,12 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Yearly Household Income";
             // 
-            // textBox1
+            // yearlyIncomeTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(315, 139);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 20;
+            this.yearlyIncomeTextBox.Location = new System.Drawing.Point(315, 139);
+            this.yearlyIncomeTextBox.Name = "yearlyIncomeTextBox";
+            this.yearlyIncomeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.yearlyIncomeTextBox.TabIndex = 20;
             // 
             // personalInfoTabControl
             // 
@@ -257,7 +257,7 @@
             this.tabPage1.Controls.Add(this.ageOneCheckbox);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.undocumentedRadioButton);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.yearlyIncomeTextBox);
             this.tabPage1.Controls.Add(this.ImmigrationStatusLabel);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.usCitizenRadioButton);
@@ -268,7 +268,7 @@
             this.tabPage1.Controls.Add(this.fiveYearExemptCheckBox);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.numberOfFamilyMemberstextBox1);
+            this.tabPage1.Controls.Add(this.numberOfFamilyMembersTextBox);
             this.tabPage1.Controls.Add(this.isPregnantCheckBox);
             this.tabPage1.Controls.Add(this.doesNotHaveChildrenCheckBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -557,13 +557,13 @@
         private System.Windows.Forms.TextBox yearsPresentTextBox;
         private System.Windows.Forms.CheckBox fiveYearExemptCheckBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox numberOfFamilyMemberstextBox1;
+        private System.Windows.Forms.TextBox numberOfFamilyMembersTextBox;
         private System.Windows.Forms.CheckBox doesNotHaveChildrenCheckBox;
         private System.Windows.Forms.CheckBox isPregnantCheckBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox yearlyIncomeTextBox;
         private System.Windows.Forms.TabControl personalInfoTabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox1;

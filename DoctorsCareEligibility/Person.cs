@@ -13,25 +13,21 @@ namespace DoctorsCareEligibility
 
         public List<int> agesOfChildren { get; set; }
         public int numberOfFamilyMembers { get; set; }
-        private int _residencyStatus;
-
-        public int residencyStatus
-        {
-            get { return _residencyStatus; }
-            set { _residencyStatus = value; }
-        }
+        public string residencyStatus { get; set; }
 
         public Person(
              
             int _yearlyIncome,
             int _numberOfFamilyMembers,
-            List<int> _agesOfChildren
+            List<int> _agesOfChildren,
+            string _residencyStatus
             )
         {
             
             amountOfFederalPovertyLevel = getFPL(_yearlyIncome, _numberOfFamilyMembers);
             numberOfFamilyMembers = _numberOfFamilyMembers;
             agesOfChildren = _agesOfChildren;
+            residencyStatus = _residencyStatus;
             
         }
 

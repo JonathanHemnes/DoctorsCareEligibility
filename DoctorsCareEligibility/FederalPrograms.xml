@@ -31,7 +31,7 @@
   <program>
     <programName>Weatherization</programName>
     <requirements>
-      <immigrationStatus>CITIZEN</immigrationStatus>
+      <immigrationStatus>USCITIZEN</immigrationStatus>
       <maxLevelOfFPL>200</maxLevelOfFPL>
     </requirements>
     <note>If client is the home owner then furnace and refrigerator repair is free, if client is renting their home, the landlord is asked to pay half of the furnace/refrigerator repair costs, if they choose not to the renter may pay himself. If the client is living in a fourplex, two of the complexes must qualify for weatherization. Large apartment buildings are evaluated on a case by case basis.</note>
@@ -46,7 +46,7 @@
   <program>
     <programName>TANF</programName>
     <requirements>
-      <immigrationStatus>CITIZEN</immigrationStatus>
+      <immigrationStatus>USCITIZEN</immigrationStatus>
       <maxLevelOfFPL>185</maxLevelOfFPL>
       <childRequirement>19</childRequirement>
     </requirements>
@@ -62,7 +62,7 @@
   <program>
     <programName>FCC Life Line</programName>
     <requirements>
-      <immigrationStatus>CITIZEN</immigrationStatus>
+      <immigrationStatus>USCITIZEN</immigrationStatus>
       <maxLevelOfFPL>185</maxLevelOfFPL>
     </requirements>
     <note></note>

@@ -192,22 +192,7 @@ namespace DoctorsCareEligibility
         private void showAllProgramsButton_Click(object sender, EventArgs e)
         {
             
-            XElement federalProgramsXML = XElement.Load("C:\\Users\\Jonathan Hemnes\\Documents\\Visual Studio 2013\\Projects\\DoctorsCareEligibility\\DoctorsCareEligibility\\FederalPrograms.xml");
-
-            //XName programs = "ProgramName";
-
-            IEnumerable<XElement> allPrograms = federalProgramsXML.Elements();
-
-            List<string> everyprogram = new List<string>();
-
-            StringBuilder sb = new StringBuilder();
-
-            foreach (var program in allPrograms)
-            {
-                everyprogram.Add(program.Element("programName").Value);
-
-            }
-            eligibleProgramsListBox.DataSource = everyprogram;
+            
             
         }
         

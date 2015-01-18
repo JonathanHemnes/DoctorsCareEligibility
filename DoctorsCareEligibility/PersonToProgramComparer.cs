@@ -46,7 +46,7 @@ namespace DoctorsCareEligibility
         {
             Boolean doesMeetChildAgeRequirement = false;
 
-            if (program.ChildAges.Count == null)
+            if (program.ChildAges == null)
             {
                 doesMeetChildAgeRequirement = true;
             }
@@ -80,7 +80,7 @@ namespace DoctorsCareEligibility
         private Boolean meetsImmigrationStatusRequirement(FederalProgram program, Person person)
         {
             Boolean doesMeetImmigrationStatusRequirement = false;
-            if (program.ImmigrationStatus.Count == null)
+            if (program.ImmigrationStatus == null)
             {
                 doesMeetImmigrationStatusRequirement = true;
             }

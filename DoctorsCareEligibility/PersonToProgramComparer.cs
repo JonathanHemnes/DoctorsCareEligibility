@@ -15,9 +15,23 @@ namespace DoctorsCareEligibility
             this.listOfPotentialFederalPrograms = _listOfFederalPrograms;
             this.personToCompareToFederalPrograms = _person;
         }
-        public Boolean comparePersonToFederalProgram(FederalProgram program, Person person)
+        public List<FederalProgram> getProgramMatchesForPerson()
+        {
+            List<FederalProgram> programMatches = new List<FederalProgram>() ;
+
+            foreach (FederalProgram program in listOfPotentialFederalPrograms)
+            {
+                if (comparePersonToFederalProgram(program,personToCompareToFederalPrograms))
+                {
+                    programMatches.Add(program);
+                }
+            }
+            return programMatches;
+        }
+        private Boolean comparePersonToFederalProgram(FederalProgram program, Person person)
         {
             Boolean matchesAllRequirements = false;
+
             if(meetsChildAgeRequirements(program,person) 
                 && meetsFPLRequirement(program,person) 
                 && meetsImmigrationStatusRequirement(program,person))
@@ -32,6 +46,23 @@ namespace DoctorsCareEligibility
         {
             Boolean doesMeetChildAgeRequirement = false;
 
+            if (program.ChildAges.Count == 0)
+            {
+                doesMeetChildAgeRequirement = true;
+            }
+            else
+            {
+                foreach (int requiredProgramAge in program.ChildAges)
+                {
+                    foreach (int ageOfPersonsChild in person.agesOfChildren)
+                    {
+                        if (ageOfPersonsChild <= requiredProgramAge)
+                        {
+                            doesMeetChildAgeRequirement = true;
+                        }
+                    }
+                }
+            }
             return doesMeetChildAgeRequirement;
 
         }
@@ -39,11 +70,30 @@ namespace DoctorsCareEligibility
         {
             Boolean doesMeetFPLRequirement = false;
 
+            if (person.amountOfFederalPovertyLevel < program.MaxLevelOfFederalPoverty)
+            {
+                doesMeetFPLRequirement = true;
+            }
+
             return doesMeetFPLRequirement;
         }
         private Boolean meetsImmigrationStatusRequirement(FederalProgram program, Person person)
         {
             Boolean doesMeetImmigrationStatusRequirement = false;
+            if (program.ImmigrationStatus.Count == 0)
+            {
+                doesMeetImmigrationStatusRequirement = true;
+            }
+            else
+            {
+                foreach (String immigrationStatus in program.ImmigrationStatus)
+                {
+                    if (person.residencyStatus.ToUpper() == immigrationStatus.ToUpper())
+                    {
+                        doesMeetImmigrationStatusRequirement = true;
+                    }
+                }
+            }
 
             return doesMeetImmigrationStatusRequirement;
         }

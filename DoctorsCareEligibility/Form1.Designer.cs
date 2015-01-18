@@ -37,7 +37,6 @@
             this.fiveYearExemptCheckBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.numberOfFamilyMembersTextBox = new System.Windows.Forms.TextBox();
-            this.doesNotHaveChildrenCheckBox = new System.Windows.Forms.CheckBox();
             this.isPregnantCheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,11 +65,13 @@
             this.ageOneCheckbox = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.eligibleProgramsTabPage = new System.Windows.Forms.TabPage();
+            this.showAllProgramsButton = new System.Windows.Forms.Button();
             this.getMatchesButton = new System.Windows.Forms.Button();
             this.programDescriptionLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.eligibleProgramsListBox = new System.Windows.Forms.ListBox();
-            this.showAllProgramsButton = new System.Windows.Forms.Button();
+            this.noteLabel = new System.Windows.Forms.Label();
+            this.notesLabel = new System.Windows.Forms.Label();
             this.personalInfoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -165,22 +166,11 @@
             this.numberOfFamilyMembersTextBox.Size = new System.Drawing.Size(97, 20);
             this.numberOfFamilyMembersTextBox.TabIndex = 8;
             // 
-            // doesNotHaveChildrenCheckBox
-            // 
-            this.doesNotHaveChildrenCheckBox.AutoSize = true;
-            this.doesNotHaveChildrenCheckBox.Location = new System.Drawing.Point(10, 227);
-            this.doesNotHaveChildrenCheckBox.Name = "doesNotHaveChildrenCheckBox";
-            this.doesNotHaveChildrenCheckBox.Size = new System.Drawing.Size(136, 17);
-            this.doesNotHaveChildrenCheckBox.TabIndex = 11;
-            this.doesNotHaveChildrenCheckBox.Text = "Does not have children";
-            this.doesNotHaveChildrenCheckBox.UseVisualStyleBackColor = true;
-            this.doesNotHaveChildrenCheckBox.CheckedChanged += new System.EventHandler(this.doesNotHaveChildrenCheckBox_CheckedChanged);
-            // 
             // isPregnantCheckBox
             // 
             this.isPregnantCheckBox.AutoSize = true;
             this.isPregnantCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isPregnantCheckBox.Location = new System.Drawing.Point(10, 250);
+            this.isPregnantCheckBox.Location = new System.Drawing.Point(37, 223);
             this.isPregnantCheckBox.Name = "isPregnantCheckBox";
             this.isPregnantCheckBox.Size = new System.Drawing.Size(69, 17);
             this.isPregnantCheckBox.TabIndex = 12;
@@ -201,7 +191,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 206);
+            this.label2.Location = new System.Drawing.Point(12, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 18;
@@ -231,7 +221,7 @@
             this.personalInfoTabControl.Location = new System.Drawing.Point(2, 2);
             this.personalInfoTabControl.Name = "personalInfoTabControl";
             this.personalInfoTabControl.SelectedIndex = 0;
-            this.personalInfoTabControl.Size = new System.Drawing.Size(667, 474);
+            this.personalInfoTabControl.Size = new System.Drawing.Size(602, 434);
             this.personalInfoTabControl.TabIndex = 21;
             // 
             // tabPage1
@@ -271,18 +261,17 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.numberOfFamilyMembersTextBox);
             this.tabPage1.Controls.Add(this.isPregnantCheckBox);
-            this.tabPage1.Controls.Add(this.doesNotHaveChildrenCheckBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(659, 448);
+            this.tabPage1.Size = new System.Drawing.Size(594, 408);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personal Information";
             // 
             // ageNineteenCheckBox
             // 
             this.ageNineteenCheckBox.AutoSize = true;
-            this.ageNineteenCheckBox.Location = new System.Drawing.Point(205, 319);
+            this.ageNineteenCheckBox.Location = new System.Drawing.Point(232, 292);
             this.ageNineteenCheckBox.Name = "ageNineteenCheckBox";
             this.ageNineteenCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageNineteenCheckBox.TabIndex = 40;
@@ -292,7 +281,7 @@
             // ageEighteenCheckBox
             // 
             this.ageEighteenCheckBox.AutoSize = true;
-            this.ageEighteenCheckBox.Location = new System.Drawing.Point(205, 296);
+            this.ageEighteenCheckBox.Location = new System.Drawing.Point(232, 269);
             this.ageEighteenCheckBox.Name = "ageEighteenCheckBox";
             this.ageEighteenCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageEighteenCheckBox.TabIndex = 39;
@@ -302,7 +291,7 @@
             // ageSeventeenCheckBox
             // 
             this.ageSeventeenCheckBox.AutoSize = true;
-            this.ageSeventeenCheckBox.Location = new System.Drawing.Point(205, 273);
+            this.ageSeventeenCheckBox.Location = new System.Drawing.Point(232, 246);
             this.ageSeventeenCheckBox.Name = "ageSeventeenCheckBox";
             this.ageSeventeenCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageSeventeenCheckBox.TabIndex = 38;
@@ -312,7 +301,7 @@
             // ageSixteenCheckBox
             // 
             this.ageSixteenCheckBox.AutoSize = true;
-            this.ageSixteenCheckBox.Location = new System.Drawing.Point(205, 250);
+            this.ageSixteenCheckBox.Location = new System.Drawing.Point(232, 223);
             this.ageSixteenCheckBox.Name = "ageSixteenCheckBox";
             this.ageSixteenCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageSixteenCheckBox.TabIndex = 37;
@@ -322,7 +311,7 @@
             // ageFifteenCheckBox
             // 
             this.ageFifteenCheckBox.AutoSize = true;
-            this.ageFifteenCheckBox.Location = new System.Drawing.Point(103, 411);
+            this.ageFifteenCheckBox.Location = new System.Drawing.Point(130, 384);
             this.ageFifteenCheckBox.Name = "ageFifteenCheckBox";
             this.ageFifteenCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageFifteenCheckBox.TabIndex = 36;
@@ -332,7 +321,7 @@
             // ageFourteenCheckBox
             // 
             this.ageFourteenCheckBox.AutoSize = true;
-            this.ageFourteenCheckBox.Location = new System.Drawing.Point(103, 388);
+            this.ageFourteenCheckBox.Location = new System.Drawing.Point(130, 361);
             this.ageFourteenCheckBox.Name = "ageFourteenCheckBox";
             this.ageFourteenCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageFourteenCheckBox.TabIndex = 35;
@@ -342,7 +331,7 @@
             // ageThirteenCheckBox
             // 
             this.ageThirteenCheckBox.AutoSize = true;
-            this.ageThirteenCheckBox.Location = new System.Drawing.Point(103, 365);
+            this.ageThirteenCheckBox.Location = new System.Drawing.Point(130, 338);
             this.ageThirteenCheckBox.Name = "ageThirteenCheckBox";
             this.ageThirteenCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageThirteenCheckBox.TabIndex = 34;
@@ -352,7 +341,7 @@
             // ageTwelveCheckBox
             // 
             this.ageTwelveCheckBox.AutoSize = true;
-            this.ageTwelveCheckBox.Location = new System.Drawing.Point(103, 342);
+            this.ageTwelveCheckBox.Location = new System.Drawing.Point(130, 315);
             this.ageTwelveCheckBox.Name = "ageTwelveCheckBox";
             this.ageTwelveCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageTwelveCheckBox.TabIndex = 33;
@@ -362,7 +351,7 @@
             // ageElevenCheckBox
             // 
             this.ageElevenCheckBox.AutoSize = true;
-            this.ageElevenCheckBox.Location = new System.Drawing.Point(103, 319);
+            this.ageElevenCheckBox.Location = new System.Drawing.Point(130, 292);
             this.ageElevenCheckBox.Name = "ageElevenCheckBox";
             this.ageElevenCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageElevenCheckBox.TabIndex = 32;
@@ -372,7 +361,7 @@
             // ageTenCheckBox
             // 
             this.ageTenCheckBox.AutoSize = true;
-            this.ageTenCheckBox.Location = new System.Drawing.Point(103, 296);
+            this.ageTenCheckBox.Location = new System.Drawing.Point(130, 269);
             this.ageTenCheckBox.Name = "ageTenCheckBox";
             this.ageTenCheckBox.Size = new System.Drawing.Size(38, 17);
             this.ageTenCheckBox.TabIndex = 31;
@@ -382,7 +371,7 @@
             // ageNineCheckBox
             // 
             this.ageNineCheckBox.AutoSize = true;
-            this.ageNineCheckBox.Location = new System.Drawing.Point(103, 273);
+            this.ageNineCheckBox.Location = new System.Drawing.Point(130, 246);
             this.ageNineCheckBox.Name = "ageNineCheckBox";
             this.ageNineCheckBox.Size = new System.Drawing.Size(32, 17);
             this.ageNineCheckBox.TabIndex = 30;
@@ -392,7 +381,7 @@
             // ageEightCheckBox
             // 
             this.ageEightCheckBox.AutoSize = true;
-            this.ageEightCheckBox.Location = new System.Drawing.Point(103, 250);
+            this.ageEightCheckBox.Location = new System.Drawing.Point(130, 223);
             this.ageEightCheckBox.Name = "ageEightCheckBox";
             this.ageEightCheckBox.Size = new System.Drawing.Size(32, 17);
             this.ageEightCheckBox.TabIndex = 29;
@@ -402,7 +391,7 @@
             // ageSevenCheckBox
             // 
             this.ageSevenCheckBox.AutoSize = true;
-            this.ageSevenCheckBox.Location = new System.Drawing.Point(10, 411);
+            this.ageSevenCheckBox.Location = new System.Drawing.Point(37, 384);
             this.ageSevenCheckBox.Name = "ageSevenCheckBox";
             this.ageSevenCheckBox.Size = new System.Drawing.Size(32, 17);
             this.ageSevenCheckBox.TabIndex = 28;
@@ -412,7 +401,7 @@
             // ageSixcheckBox
             // 
             this.ageSixcheckBox.AutoSize = true;
-            this.ageSixcheckBox.Location = new System.Drawing.Point(10, 388);
+            this.ageSixcheckBox.Location = new System.Drawing.Point(37, 361);
             this.ageSixcheckBox.Name = "ageSixcheckBox";
             this.ageSixcheckBox.Size = new System.Drawing.Size(32, 17);
             this.ageSixcheckBox.TabIndex = 27;
@@ -422,7 +411,7 @@
             // ageFiveCheckBox
             // 
             this.ageFiveCheckBox.AutoSize = true;
-            this.ageFiveCheckBox.Location = new System.Drawing.Point(10, 365);
+            this.ageFiveCheckBox.Location = new System.Drawing.Point(37, 338);
             this.ageFiveCheckBox.Name = "ageFiveCheckBox";
             this.ageFiveCheckBox.Size = new System.Drawing.Size(32, 17);
             this.ageFiveCheckBox.TabIndex = 26;
@@ -432,7 +421,7 @@
             // ageFourCheckBox
             // 
             this.ageFourCheckBox.AutoSize = true;
-            this.ageFourCheckBox.Location = new System.Drawing.Point(10, 342);
+            this.ageFourCheckBox.Location = new System.Drawing.Point(37, 315);
             this.ageFourCheckBox.Name = "ageFourCheckBox";
             this.ageFourCheckBox.Size = new System.Drawing.Size(32, 17);
             this.ageFourCheckBox.TabIndex = 25;
@@ -442,7 +431,7 @@
             // ageThreeCheckBox
             // 
             this.ageThreeCheckBox.AutoSize = true;
-            this.ageThreeCheckBox.Location = new System.Drawing.Point(10, 319);
+            this.ageThreeCheckBox.Location = new System.Drawing.Point(37, 292);
             this.ageThreeCheckBox.Name = "ageThreeCheckBox";
             this.ageThreeCheckBox.Size = new System.Drawing.Size(32, 17);
             this.ageThreeCheckBox.TabIndex = 24;
@@ -452,7 +441,7 @@
             // ageTwoCheckBox
             // 
             this.ageTwoCheckBox.AutoSize = true;
-            this.ageTwoCheckBox.Location = new System.Drawing.Point(10, 296);
+            this.ageTwoCheckBox.Location = new System.Drawing.Point(37, 269);
             this.ageTwoCheckBox.Name = "ageTwoCheckBox";
             this.ageTwoCheckBox.Size = new System.Drawing.Size(32, 17);
             this.ageTwoCheckBox.TabIndex = 23;
@@ -462,7 +451,7 @@
             // ageOneCheckbox
             // 
             this.ageOneCheckbox.AutoSize = true;
-            this.ageOneCheckbox.Location = new System.Drawing.Point(10, 273);
+            this.ageOneCheckbox.Location = new System.Drawing.Point(37, 246);
             this.ageOneCheckbox.Name = "ageOneCheckbox";
             this.ageOneCheckbox.Size = new System.Drawing.Size(32, 17);
             this.ageOneCheckbox.TabIndex = 22;
@@ -472,7 +461,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DoctorsCareEligibility.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(368, 285);
+            this.pictureBox1.Location = new System.Drawing.Point(306, 211);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 120);
             this.pictureBox1.TabIndex = 21;
@@ -482,6 +471,8 @@
             // eligibleProgramsTabPage
             // 
             this.eligibleProgramsTabPage.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.eligibleProgramsTabPage.Controls.Add(this.notesLabel);
+            this.eligibleProgramsTabPage.Controls.Add(this.noteLabel);
             this.eligibleProgramsTabPage.Controls.Add(this.showAllProgramsButton);
             this.eligibleProgramsTabPage.Controls.Add(this.getMatchesButton);
             this.eligibleProgramsTabPage.Controls.Add(this.programDescriptionLabel);
@@ -490,15 +481,25 @@
             this.eligibleProgramsTabPage.Location = new System.Drawing.Point(4, 22);
             this.eligibleProgramsTabPage.Name = "eligibleProgramsTabPage";
             this.eligibleProgramsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.eligibleProgramsTabPage.Size = new System.Drawing.Size(659, 448);
+            this.eligibleProgramsTabPage.Size = new System.Drawing.Size(594, 408);
             this.eligibleProgramsTabPage.TabIndex = 1;
             this.eligibleProgramsTabPage.Text = "Eligible Programs";
+            // 
+            // showAllProgramsButton
+            // 
+            this.showAllProgramsButton.Location = new System.Drawing.Point(336, 22);
+            this.showAllProgramsButton.Name = "showAllProgramsButton";
+            this.showAllProgramsButton.Size = new System.Drawing.Size(246, 23);
+            this.showAllProgramsButton.TabIndex = 4;
+            this.showAllProgramsButton.Text = "Show All Programs";
+            this.showAllProgramsButton.UseVisualStyleBackColor = true;
+            this.showAllProgramsButton.Click += new System.EventHandler(this.showAllProgramsButton_Click);
             // 
             // getMatchesButton
             // 
             this.getMatchesButton.Location = new System.Drawing.Point(35, 22);
             this.getMatchesButton.Name = "getMatchesButton";
-            this.getMatchesButton.Size = new System.Drawing.Size(288, 23);
+            this.getMatchesButton.Size = new System.Drawing.Size(273, 23);
             this.getMatchesButton.TabIndex = 3;
             this.getMatchesButton.Text = "Get Matches";
             this.getMatchesButton.UseVisualStyleBackColor = true;
@@ -527,25 +528,33 @@
             this.eligibleProgramsListBox.FormattingEnabled = true;
             this.eligibleProgramsListBox.Location = new System.Drawing.Point(35, 75);
             this.eligibleProgramsListBox.Name = "eligibleProgramsListBox";
-            this.eligibleProgramsListBox.Size = new System.Drawing.Size(288, 342);
+            this.eligibleProgramsListBox.Size = new System.Drawing.Size(273, 303);
             this.eligibleProgramsListBox.TabIndex = 0;
             // 
-            // showAllProgramsButton
+            // noteLabel
             // 
-            this.showAllProgramsButton.Location = new System.Drawing.Point(353, 22);
-            this.showAllProgramsButton.Name = "showAllProgramsButton";
-            this.showAllProgramsButton.Size = new System.Drawing.Size(279, 23);
-            this.showAllProgramsButton.TabIndex = 4;
-            this.showAllProgramsButton.Text = "Show All Programs";
-            this.showAllProgramsButton.UseVisualStyleBackColor = true;
-            this.showAllProgramsButton.Click += new System.EventHandler(this.showAllProgramsButton_Click);
+            this.noteLabel.AutoSize = true;
+            this.noteLabel.Location = new System.Drawing.Point(348, 79);
+            this.noteLabel.Name = "noteLabel";
+            this.noteLabel.Size = new System.Drawing.Size(0, 13);
+            this.noteLabel.TabIndex = 5;
+            // 
+            // notesLabel
+            // 
+            this.notesLabel.AutoSize = true;
+            this.notesLabel.Location = new System.Drawing.Point(338, 75);
+            this.notesLabel.MaximumSize = new System.Drawing.Size(35, 13);
+            this.notesLabel.Name = "notesLabel";
+            this.notesLabel.Size = new System.Drawing.Size(35, 13);
+            this.notesLabel.TabIndex = 6;
+            this.notesLabel.Text = "label6";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(672, 480);
+            this.ClientSize = new System.Drawing.Size(600, 433);
             this.Controls.Add(this.personalInfoTabControl);
             this.Name = "Form1";
             this.Text = "Doctors Care Eligibility";
@@ -570,7 +579,6 @@
         private System.Windows.Forms.CheckBox fiveYearExemptCheckBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox numberOfFamilyMembersTextBox;
-        private System.Windows.Forms.CheckBox doesNotHaveChildrenCheckBox;
         private System.Windows.Forms.CheckBox isPregnantCheckBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -604,6 +612,8 @@
         private System.Windows.Forms.CheckBox ageOneCheckbox;
         private System.Windows.Forms.Button getMatchesButton;
         private System.Windows.Forms.Button showAllProgramsButton;
+        private System.Windows.Forms.Label noteLabel;
+        private System.Windows.Forms.Label notesLabel;
     }
 }
 

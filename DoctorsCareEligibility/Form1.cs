@@ -16,6 +16,22 @@ namespace DoctorsCareEligibility
         public Form1()
         {
             InitializeComponent();
+            eligibleProgramsListBox.SelectedValueChanged += new EventHandler(this.eligibleProgramsListBox_SelectionChanged);
+        }
+        private void eligibleProgramsListBox_SelectionChanged(object sender, EventArgs e)
+        {
+            FederalProgramManager fpm = new FederalProgramManager();
+            List<FederalProgram> allPrograms = new List<FederalProgram>();
+
+            allPrograms = fpm.getListOfAllFederalPrograms();
+
+            foreach (var programs in allPrograms)
+            {
+                if (eligibleProgramsListBox.SelectedValue == programs.NameOfProgram)
+                {
+                    notesLabel.Text = programs.Notes;
+                }
+            }
         }
 
         private void ImmigrationStatusLabel_Click(object sender, EventArgs e)
@@ -182,7 +198,7 @@ namespace DoctorsCareEligibility
 
         private string getResidencyStatus()
         {
-            string status;
+            string status = null;
             if (usCitizenRadioButton.Checked)
             {
                 status = "USCITIZEN";
@@ -195,7 +211,9 @@ namespace DoctorsCareEligibility
             {
                 status = "UNDOCUMENTED";
             }
-            else
+            if(!usCitizenRadioButton.Checked
+                && !lawFullyPresentRadioButton.Checked
+                && !undocumentedRadioButton.Checked)
             {
                 MessageBox.Show("No residency status has been selected, defaulting to US CITIZEN");
                 status = "USCITIZEN";
@@ -217,6 +235,11 @@ namespace DoctorsCareEligibility
                programNames.Add(program.NameOfProgram);
             }
             eligibleProgramsListBox.DataSource = programNames;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
         
     }

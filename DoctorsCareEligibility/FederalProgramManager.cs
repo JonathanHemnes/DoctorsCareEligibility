@@ -12,9 +12,8 @@ namespace DoctorsCareEligibility
     class FederalProgramManager
     {
         public string FederalProgramsFilePath { get; set; }
-        public FederalProgramManager(string locationOfFederalProgramsXML)
+        public FederalProgramManager()
         {
-            FederalProgramsFilePath = locationOfFederalProgramsXML;
         }
 
         public List<FederalProgram> getListOfAllFederalPrograms()
@@ -51,6 +50,7 @@ namespace DoctorsCareEligibility
             agelist.Add(0);
             agelist.Add(18);
             CCAP.MaxLevelOfFederalPoverty = 185;
+            CCAP.NameOfProgram = "CCAP";
             CCAP.ChildAges = agelist;
             CCAP.Notes = "Children must be legal residents, but do not need to meet the 5 year bar requirement, however parents do not have to have legal residency to apply";
             programlist.Add(CCAP);
@@ -60,11 +60,13 @@ namespace DoctorsCareEligibility
             ImmigrationStatus.Add("USCITIZEN");
             Weaterization.ImmigrationStatus = ImmigrationStatus;
             Weaterization.MaxLevelOfFederalPoverty = 185;
+            Weaterization.NameOfProgram = "Weatherization";
             Weaterization.Notes = "If client is the home owner then furnace and refrigerator repair is free, if client is renting their home, the landlord is asked to pay half of the furnace/refrigerator repair costs, if they choose not to the renter may pay himself. If the client is living in a fourplex, two of the complexes must qualify for weatherization. Large apartment buildings are evaluated on a case by case basis.";
             programlist.Add(Weaterization);
 
             FederalProgram internetEssentials = new FederalProgram();
             internetEssentials.MaxLevelOfFederalPoverty = 185;
+            internetEssentials.NameOfProgram = "Internet Essentials";
             internetEssentials.Notes = "Have at least one child that qualifies for the National School Lunch Program; must not have subscribed to Comcast in the last 90 days; must not have overdue Comcast bills/unreturned equipment";
             programlist.Add(internetEssentials);
 
@@ -72,18 +74,21 @@ namespace DoctorsCareEligibility
             agelist.Clear();
             agelist.Add(19);
             TANF.ChildAges = agelist;
+            TANF.NameOfProgram = "TANF";
             TANF.MaxLevelOfFederalPoverty = 185;
             TANF.ImmigrationStatus = ImmigrationStatus;
             programlist.Add(TANF);
 
             FederalProgram foodAssistance = new FederalProgram();
             foodAssistance.MaxLevelOfFederalPoverty = 130;
+            foodAssistance.NameOfProgram = "Food Assistance";
             foodAssistance.Notes = "here have been cases where households with illegal parents, but legal children qualified for assistance.";
-            programlist.Add(TANF);
+            programlist.Add(foodAssistance);
 
             FederalProgram fccLifeLine = new FederalProgram();
             fccLifeLine.ImmigrationStatus = ImmigrationStatus;
             fccLifeLine.MaxLevelOfFederalPoverty = 185;
+            fccLifeLine.NameOfProgram = "FCC Life Line Assistance";
             programlist.Add(fccLifeLine);
 
             return programlist;

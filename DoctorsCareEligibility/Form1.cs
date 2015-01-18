@@ -191,9 +191,17 @@ namespace DoctorsCareEligibility
 
         private void showAllProgramsButton_Click(object sender, EventArgs e)
         {
+
+            FederalProgramManager federalProgramManager = new FederalProgramManager();
+            List<FederalProgram> allprograms = new List<FederalProgram>();
+            allprograms = federalProgramManager.getListOfAllFederalPrograms();
             
-            
-            
+            List<string> programNames = new List<string>();
+            foreach (var program in allprograms)
+            {
+               programNames.Add(program.NameOfProgram);
+            }
+            eligibleProgramsListBox.DataSource = programNames;
         }
         
     }

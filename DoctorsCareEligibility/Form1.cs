@@ -46,7 +46,22 @@ namespace DoctorsCareEligibility
 
         private void getMatchesButton_Click(object sender, EventArgs e)
         {
+            FederalProgramManager programManager = new FederalProgramManager();
+            List<FederalProgram> listOfAllFederalPrograms = programManager.getListOfAllFederalPrograms();
             Person person = new Person(getYearlyIncome(), getNumberOfFamilyMembers(), getAgesOfChildren(), getResidencyStatus());
+
+            PersonToProgramComparer comparer = new PersonToProgramComparer(listOfAllFederalPrograms, person);
+
+            List<FederalProgram> programMatches = comparer.getProgramMatchesForPerson();
+
+            List<string> namesOfMatchedPrograms = new List<string>();
+
+            foreach (var program in programMatches) 
+            {
+                namesOfMatchedPrograms.Add(program.NameOfProgram);
+            }
+            eligibleProgramsListBox.DataSource = namesOfMatchedPrograms;
+
         }
 
         private List<int> getAgesOfChildren()

@@ -67,7 +67,7 @@ namespace DoctorsCareEligibility
             FederalProgram internetEssentials = new FederalProgram();
             internetEssentials.MaxLevelOfFederalPoverty = 185;
             internetEssentials.NameOfProgram = "Internet Essentials";
-            internetEssentials.Notes = "Have at least one child that qualifies for the National School Lunch Program; must not have subscribed to Comcast in the last 90 days; must not have overdue Comcast bills/unreturned equipment";
+            internetEssentials.Notes = "Must have at least one child that qualifies for the National School Lunch Program; must not have subscribed to Comcast in the last 90 days; must not have overdue Comcast bills/unreturned equipment";
             programlist.Add(internetEssentials);
 
             FederalProgram TANF = new FederalProgram();
@@ -82,7 +82,7 @@ namespace DoctorsCareEligibility
             FederalProgram foodAssistance = new FederalProgram();
             foodAssistance.MaxLevelOfFederalPoverty = 130;
             foodAssistance.NameOfProgram = "Food Assistance";
-            foodAssistance.Notes = "here have been cases where households with illegal parents, but legal children qualified for assistance.";
+            foodAssistance.Notes = "There have been cases where households with illegal parents, but legal children qualified for assistance.";
             programlist.Add(foodAssistance);
 
             FederalProgram fccLifeLine = new FederalProgram();

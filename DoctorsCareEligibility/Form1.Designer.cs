@@ -67,11 +67,12 @@
             this.eligibleProgramsTabPage = new System.Windows.Forms.TabPage();
             this.showAllProgramsButton = new System.Windows.Forms.Button();
             this.getMatchesButton = new System.Windows.Forms.Button();
-            this.programDescriptionLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.eligibleProgramsListBox = new System.Windows.Forms.ListBox();
             this.noteLabel = new System.Windows.Forms.Label();
-            this.notesLabel = new System.Windows.Forms.Label();
+            this.programDescriptionLabel = new System.Windows.Forms.Label();
+            this.elibleListMatchingNoteLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.personalInfoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -471,7 +472,8 @@
             // eligibleProgramsTabPage
             // 
             this.eligibleProgramsTabPage.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.eligibleProgramsTabPage.Controls.Add(this.notesLabel);
+            this.eligibleProgramsTabPage.Controls.Add(this.label6);
+            this.eligibleProgramsTabPage.Controls.Add(this.elibleListMatchingNoteLabel);
             this.eligibleProgramsTabPage.Controls.Add(this.noteLabel);
             this.eligibleProgramsTabPage.Controls.Add(this.showAllProgramsButton);
             this.eligibleProgramsTabPage.Controls.Add(this.getMatchesButton);
@@ -484,12 +486,13 @@
             this.eligibleProgramsTabPage.Size = new System.Drawing.Size(594, 408);
             this.eligibleProgramsTabPage.TabIndex = 1;
             this.eligibleProgramsTabPage.Text = "Eligible Programs";
+            this.eligibleProgramsTabPage.Click += new System.EventHandler(this.eligibleProgramsTabPage_Click);
             // 
             // showAllProgramsButton
             // 
             this.showAllProgramsButton.Location = new System.Drawing.Point(336, 22);
             this.showAllProgramsButton.Name = "showAllProgramsButton";
-            this.showAllProgramsButton.Size = new System.Drawing.Size(246, 23);
+            this.showAllProgramsButton.Size = new System.Drawing.Size(230, 23);
             this.showAllProgramsButton.TabIndex = 4;
             this.showAllProgramsButton.Text = "Show All Programs";
             this.showAllProgramsButton.UseVisualStyleBackColor = true;
@@ -504,14 +507,6 @@
             this.getMatchesButton.Text = "Get Matches";
             this.getMatchesButton.UseVisualStyleBackColor = true;
             this.getMatchesButton.Click += new System.EventHandler(this.getMatchesButton_Click);
-            // 
-            // programDescriptionLabel
-            // 
-            this.programDescriptionLabel.AutoSize = true;
-            this.programDescriptionLabel.Location = new System.Drawing.Point(379, 75);
-            this.programDescriptionLabel.Name = "programDescriptionLabel";
-            this.programDescriptionLabel.Size = new System.Drawing.Size(0, 13);
-            this.programDescriptionLabel.TabIndex = 2;
             // 
             // label5
             // 
@@ -539,15 +534,32 @@
             this.noteLabel.Size = new System.Drawing.Size(0, 13);
             this.noteLabel.TabIndex = 5;
             // 
-            // notesLabel
+            // programDescriptionLabel
             // 
-            this.notesLabel.AutoSize = true;
-            this.notesLabel.Location = new System.Drawing.Point(338, 75);
-            this.notesLabel.MaximumSize = new System.Drawing.Size(35, 13);
-            this.notesLabel.Name = "notesLabel";
-            this.notesLabel.Size = new System.Drawing.Size(35, 13);
-            this.notesLabel.TabIndex = 6;
-            this.notesLabel.Text = "label6";
+            this.programDescriptionLabel.AutoSize = true;
+            this.programDescriptionLabel.Location = new System.Drawing.Point(379, 75);
+            this.programDescriptionLabel.Name = "programDescriptionLabel";
+            this.programDescriptionLabel.Size = new System.Drawing.Size(0, 13);
+            this.programDescriptionLabel.TabIndex = 2;
+            // 
+            // elibleListMatchingNoteLabel
+            // 
+            this.elibleListMatchingNoteLabel.AutoSize = true;
+            this.elibleListMatchingNoteLabel.Location = new System.Drawing.Point(345, 76);
+            this.elibleListMatchingNoteLabel.MaximumSize = new System.Drawing.Size(175, 200);
+            this.elibleListMatchingNoteLabel.Name = "elibleListMatchingNoteLabel";
+            this.elibleListMatchingNoteLabel.Size = new System.Drawing.Size(0, 13);
+            this.elibleListMatchingNoteLabel.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(416, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 24);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Notes";
             // 
             // Form1
             // 
@@ -590,7 +602,6 @@
         private System.Windows.Forms.TabPage eligibleProgramsTabPage;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox eligibleProgramsListBox;
-        private System.Windows.Forms.Label programDescriptionLabel;
         private System.Windows.Forms.CheckBox ageNineteenCheckBox;
         private System.Windows.Forms.CheckBox ageEighteenCheckBox;
         private System.Windows.Forms.CheckBox ageSeventeenCheckBox;
@@ -613,7 +624,9 @@
         private System.Windows.Forms.Button getMatchesButton;
         private System.Windows.Forms.Button showAllProgramsButton;
         private System.Windows.Forms.Label noteLabel;
-        private System.Windows.Forms.Label notesLabel;
+        private System.Windows.Forms.Label programDescriptionLabel;
+        private System.Windows.Forms.Label elibleListMatchingNoteLabel;
+        private System.Windows.Forms.Label label6;
     }
 }
 

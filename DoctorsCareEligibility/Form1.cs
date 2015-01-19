@@ -23,13 +23,23 @@ namespace DoctorsCareEligibility
             FederalProgramManager fpm = new FederalProgramManager();
             List<FederalProgram> allPrograms = new List<FederalProgram>();
 
+            noteLabel.AutoSize = true;
+
+
             allPrograms = fpm.getListOfAllFederalPrograms();
 
             foreach (var programs in allPrograms)
             {
-                if (eligibleProgramsListBox.SelectedValue == programs.NameOfProgram)
+                if ((string)eligibleProgramsListBox.SelectedValue == (string)programs.NameOfProgram)
                 {
-                    notesLabel.Text = programs.Notes;
+                    if (programs.Notes != null)
+                    {
+                        elibleListMatchingNoteLabel.Text = programs.Notes;
+                    }
+                    if (programs.Notes == null)
+                    {
+                        elibleListMatchingNoteLabel.Text = "There are no notes regarding this program.";
+                    }
                 }
             }
         }
@@ -238,6 +248,11 @@ namespace DoctorsCareEligibility
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eligibleProgramsTabPage_Click(object sender, EventArgs e)
         {
 
         }

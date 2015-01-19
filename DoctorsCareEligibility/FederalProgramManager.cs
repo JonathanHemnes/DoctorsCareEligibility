@@ -61,7 +61,7 @@ namespace DoctorsCareEligibility
             Weaterization.ImmigrationStatus = ImmigrationStatus;
             Weaterization.MaxLevelOfFederalPoverty = 185;
             Weaterization.NameOfProgram = "Weatherization";
-            Weaterization.Notes = "If client is the home owner then furnace and refrigerator repair is free, if client is renting their home, the landlord is asked to pay half of the furnace/refrigerator repair costs, if they choose not to the renter may pay himself. If the client is living in a fourplex, two of the complexes must qualify for weatherization. Large apartment buildings are evaluated on a case by case basis.";
+            Weaterization.Notes = "If client is the home owner then furnace and refrigerator repair is free. If client is renting their home, the landlord is asked to pay half of the furnace/refrigerator repair costs, if they choose not to the renter may pay himself. If the client is living in a fourplex, two of the complexes must qualify for weatherization. Large apartment buildings are evaluated on a case by case basis.";
             programlist.Add(Weaterization);
 
             FederalProgram internetEssentials = new FederalProgram();

@@ -37,7 +37,7 @@ namespace DoctorsCareEligibility
             int baseFPLIncome = 11670;
             int perPersonIncrease = 4060;
 
-            fpl = (income*100) / (baseFPLIncome + (familyMembers * perPersonIncrease));
+            fpl = (income*100) / (baseFPLIncome + ((familyMembers -1) * perPersonIncrease));
             return fpl;
         }
 

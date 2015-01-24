@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace DoctorsCareEligibility
 {
@@ -17,6 +18,7 @@ namespace DoctorsCareEligibility
         {
             InitializeComponent();
             eligibleProgramsListBox.SelectedValueChanged += new EventHandler(this.eligibleProgramsListBox_SelectionChanged);
+            //ProgramFormLinkLabel.LinkClicked += new EventHandler(this.ProgramFormLinkLabel_LinkClicked);
         }
         private void eligibleProgramsListBox_SelectionChanged(object sender, EventArgs e)
         {
@@ -40,9 +42,18 @@ namespace DoctorsCareEligibility
                     {
                         elibleListMatchingNoteLabel.Text = "There are no notes regarding this program.";
                     }
+                    //if (programs.linkToForm != null)
+                    //{
+                    //    LinkLabel.Link link = new LinkLabel.Link();
+                    //    link.LinkData = programs.linkToForm;
+                    //    ProgramFormLinkLabel.Text = "Click Here To Get The Form";
+                    //    ProgramFormLinkLabel.Links.Clear();
+                    //    ProgramFormLinkLabel.Links.Add(6, 4,link);
+                    //}
                 }
             }
         }
+        
 
         private void ImmigrationStatusLabel_Click(object sender, EventArgs e)
         {
@@ -254,6 +265,27 @@ namespace DoctorsCareEligibility
 
         private void eligibleProgramsTabPage_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void linkToFormButton_Click(object sender, EventArgs e)
+        {
+            string programSelectedFromListBox = eligibleProgramsListBox.SelectedItem.ToString();
+            FederalProgramManager fpm = new FederalProgramManager();
+            List<FederalProgram> allPrograms = new List<FederalProgram>();
+
+            allPrograms = fpm.getListOfAllFederalPrograms();
+
+            foreach (FederalProgram program in allPrograms)
+            {
+                if (programSelectedFromListBox != null)
+                {
+                    if (programSelectedFromListBox == program.NameOfProgram)
+                    {
+                        System.Diagnostics.Process.Start(program.linkToForm);
+                    }
+                }
+            }
 
         }
         

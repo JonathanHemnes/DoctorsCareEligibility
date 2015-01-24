@@ -14,6 +14,7 @@ namespace DoctorsCareEligibility
         public List<int> ChildAges { get; set; }
         public string NameOfProgram { get; set; }
         public string Notes { get; set; }
+        public string linkToForm { get; set; }
 
         public FederalProgram()
         {

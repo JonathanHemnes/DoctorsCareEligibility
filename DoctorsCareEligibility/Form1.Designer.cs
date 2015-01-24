@@ -65,14 +65,16 @@
             this.ageOneCheckbox = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.eligibleProgramsTabPage = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.elibleListMatchingNoteLabel = new System.Windows.Forms.Label();
+            this.noteLabel = new System.Windows.Forms.Label();
             this.showAllProgramsButton = new System.Windows.Forms.Button();
             this.getMatchesButton = new System.Windows.Forms.Button();
+            this.programDescriptionLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.eligibleProgramsListBox = new System.Windows.Forms.ListBox();
-            this.noteLabel = new System.Windows.Forms.Label();
-            this.programDescriptionLabel = new System.Windows.Forms.Label();
-            this.elibleListMatchingNoteLabel = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.ProgramFormLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.linkToFormButton = new System.Windows.Forms.Button();
             this.personalInfoTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -472,6 +474,8 @@
             // eligibleProgramsTabPage
             // 
             this.eligibleProgramsTabPage.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.eligibleProgramsTabPage.Controls.Add(this.linkToFormButton);
+            this.eligibleProgramsTabPage.Controls.Add(this.ProgramFormLinkLabel);
             this.eligibleProgramsTabPage.Controls.Add(this.label6);
             this.eligibleProgramsTabPage.Controls.Add(this.elibleListMatchingNoteLabel);
             this.eligibleProgramsTabPage.Controls.Add(this.noteLabel);
@@ -487,6 +491,33 @@
             this.eligibleProgramsTabPage.TabIndex = 1;
             this.eligibleProgramsTabPage.Text = "Eligible Programs";
             this.eligibleProgramsTabPage.Click += new System.EventHandler(this.eligibleProgramsTabPage_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(416, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 24);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Notes";
+            // 
+            // elibleListMatchingNoteLabel
+            // 
+            this.elibleListMatchingNoteLabel.AutoSize = true;
+            this.elibleListMatchingNoteLabel.Location = new System.Drawing.Point(345, 76);
+            this.elibleListMatchingNoteLabel.MaximumSize = new System.Drawing.Size(175, 200);
+            this.elibleListMatchingNoteLabel.Name = "elibleListMatchingNoteLabel";
+            this.elibleListMatchingNoteLabel.Size = new System.Drawing.Size(0, 13);
+            this.elibleListMatchingNoteLabel.TabIndex = 6;
+            // 
+            // noteLabel
+            // 
+            this.noteLabel.AutoSize = true;
+            this.noteLabel.Location = new System.Drawing.Point(348, 79);
+            this.noteLabel.Name = "noteLabel";
+            this.noteLabel.Size = new System.Drawing.Size(0, 13);
+            this.noteLabel.TabIndex = 5;
             // 
             // showAllProgramsButton
             // 
@@ -508,6 +539,14 @@
             this.getMatchesButton.UseVisualStyleBackColor = true;
             this.getMatchesButton.Click += new System.EventHandler(this.getMatchesButton_Click);
             // 
+            // programDescriptionLabel
+            // 
+            this.programDescriptionLabel.AutoSize = true;
+            this.programDescriptionLabel.Location = new System.Drawing.Point(379, 75);
+            this.programDescriptionLabel.Name = "programDescriptionLabel";
+            this.programDescriptionLabel.Size = new System.Drawing.Size(0, 13);
+            this.programDescriptionLabel.TabIndex = 2;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -526,40 +565,23 @@
             this.eligibleProgramsListBox.Size = new System.Drawing.Size(273, 303);
             this.eligibleProgramsListBox.TabIndex = 0;
             // 
-            // noteLabel
+            // ProgramFormLinkLabel
             // 
-            this.noteLabel.AutoSize = true;
-            this.noteLabel.Location = new System.Drawing.Point(348, 79);
-            this.noteLabel.Name = "noteLabel";
-            this.noteLabel.Size = new System.Drawing.Size(0, 13);
-            this.noteLabel.TabIndex = 5;
+            this.ProgramFormLinkLabel.AutoSize = true;
+            this.ProgramFormLinkLabel.Location = new System.Drawing.Point(348, 246);
+            this.ProgramFormLinkLabel.Name = "ProgramFormLinkLabel";
+            this.ProgramFormLinkLabel.Size = new System.Drawing.Size(0, 13);
+            this.ProgramFormLinkLabel.TabIndex = 8;
             // 
-            // programDescriptionLabel
+            // linkToFormButton
             // 
-            this.programDescriptionLabel.AutoSize = true;
-            this.programDescriptionLabel.Location = new System.Drawing.Point(379, 75);
-            this.programDescriptionLabel.Name = "programDescriptionLabel";
-            this.programDescriptionLabel.Size = new System.Drawing.Size(0, 13);
-            this.programDescriptionLabel.TabIndex = 2;
-            // 
-            // elibleListMatchingNoteLabel
-            // 
-            this.elibleListMatchingNoteLabel.AutoSize = true;
-            this.elibleListMatchingNoteLabel.Location = new System.Drawing.Point(345, 76);
-            this.elibleListMatchingNoteLabel.MaximumSize = new System.Drawing.Size(175, 200);
-            this.elibleListMatchingNoteLabel.Name = "elibleListMatchingNoteLabel";
-            this.elibleListMatchingNoteLabel.Size = new System.Drawing.Size(0, 13);
-            this.elibleListMatchingNoteLabel.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(416, 48);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 24);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Notes";
+            this.linkToFormButton.Location = new System.Drawing.Point(336, 260);
+            this.linkToFormButton.Name = "linkToFormButton";
+            this.linkToFormButton.Size = new System.Drawing.Size(230, 24);
+            this.linkToFormButton.TabIndex = 9;
+            this.linkToFormButton.Text = "Bring Me To The Website";
+            this.linkToFormButton.UseVisualStyleBackColor = true;
+            this.linkToFormButton.Click += new System.EventHandler(this.linkToFormButton_Click);
             // 
             // Form1
             // 
@@ -627,6 +649,8 @@
         private System.Windows.Forms.Label programDescriptionLabel;
         private System.Windows.Forms.Label elibleListMatchingNoteLabel;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel ProgramFormLinkLabel;
+        private System.Windows.Forms.Button linkToFormButton;
     }
 }
 

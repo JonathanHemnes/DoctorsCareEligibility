@@ -270,7 +270,13 @@ namespace DoctorsCareEligibility
 
         private void linkToFormButton_Click(object sender, EventArgs e)
         {
-            string programSelectedFromListBox = eligibleProgramsListBox.SelectedItem.ToString();
+            string programSelectedFromListBox = "";
+            
+            if (eligibleProgramsListBox.SelectedItem != null)
+            {
+                programSelectedFromListBox = eligibleProgramsListBox.SelectedItem.ToString();
+            }
+
             FederalProgramManager fpm = new FederalProgramManager();
             List<FederalProgram> allPrograms = new List<FederalProgram>();
 
